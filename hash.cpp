@@ -4,7 +4,7 @@
 #include "md5.h"
 
 std::string hash(std::string filename) {
-	MD5 md5;
+    MD5 md5;
 
     std::ifstream infile(filename, std::ios::binary);
     size_t buffer_size = 1024*1024;
@@ -16,6 +16,6 @@ std::string hash(std::string filename) {
     }
 
     infile.close();
-	md5.finalize();
-    return md5.hexdigest();	
+    md5.finalize();
+    return md5.hexdigest();
 }
